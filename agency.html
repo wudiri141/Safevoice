@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeVoice | Agency Portal</title>
+  <meta name="description" content="SafeVoice agency portal for assigned cases and response coordination." />
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🛡️ SafeVoice</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report Incident</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="report-types.html">Report Types</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="escape.html" class="escape-btn">ESCAPE NOW</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="section-heading">
+        <span class="eyebrow dark">Agency Portal</span>
+        <h1>Assigned cases and response coordination.</h1>
+        <p>
+          For an agency page, the best format is a role-based workspace: assigned incidents,
+          response protocols, contact information, and a queue that supports action rather than
+          broad oversight.
+        </p>
+      </div>
+    </section>
+
+    <section class="dashboard-grid cols-3">
+      <article class="kpi-card">
+        <strong>26</strong>
+        <span>Active cases</span>
+      </article>
+      <article class="kpi-card">
+        <strong>7</strong>
+        <span>Overdue follow-ups</span>
+      </article>
+      <article class="kpi-card">
+        <strong>11</strong>
+        <span>Closed today</span>
+      </article>
+    </section>
+
+    <section class="page-grid two" style="margin-top: 18px;">
+      <article class="table-panel">
+        <div class="panel-head">
+          <span class="eyebrow dark">Assigned queue</span>
+          <h2 style="margin: 14px 0 8px;">Agency case table</h2>
+          <p style="color: var(--muted); line-height: 1.7; max-width: 70ch;">
+            Agency staff need a task-driven page. This format keeps the assigned cases visible in a
+            table while leaving room for response notes and escalation instructions.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Cases currently assigned to the agency</caption>
+            <thead>
+              <tr>
+                <th scope="col">Case ID</th>
+                <th scope="col">Type</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Status</th>
+                <th scope="col">Deadline</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SV-20491</td>
+                <td>Child Abuse</td>
+                <td><span class="priority-pill high">High</span></td>
+                <td><span class="status-pill open">Open</span></td>
+                <td>Today, 4:00 PM</td>
+              </tr>
+              <tr>
+                <td>SV-20488</td>
+                <td>Neglect</td>
+                <td><span class="priority-pill medium">Medium</span></td>
+                <td><span class="status-pill in-review">In Review</span></td>
+                <td>Tomorrow, 10:00 AM</td>
+              </tr>
+              <tr>
+                <td>SV-20476</td>
+                <td>Human Trafficking</td>
+                <td><span class="priority-pill high">High</span></td>
+                <td><span class="status-pill open">Open</span></td>
+                <td>Today, 6:30 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <aside class="info-stack">
+        <article class="card">
+          <h3>Response checklist</h3>
+          <ul class="info-list">
+            <li>Verify the report location and contact details.</li>
+            <li>Assign the correct field officer or specialist.</li>
+            <li>Mark high-priority cases before routine cases.</li>
+            <li>Log any follow-up call or field visit immediately.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Escalation contacts</h3>
+          <div class="portal-list">
+            <div class="portal-item">
+              <strong>24/7 emergency desk</strong>
+              <p>Use this line when a case requires immediate protection response.</p>
+            </div>
+            <div class="portal-item">
+              <strong>Agency supervisor</strong>
+              <p>Escalate cases with missing details or jurisdiction concerns.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="callout">
+          <h3>Best format for agency</h3>
+          <p>
+            The best agency page format is a role workspace with assigned work, contact shortcuts,
+            and clear operational steps. It should feel like a focused response desk, not a public
+            marketing page.
+          </p>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container shell">
+      <div class="footer-box">
+        <h3>About SafeVoice</h3>
+        <p>SafeVoice helps citizens anonymously report abuse, trafficking and suspicious activities.</p>
+      </div>
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="report.html">Report Incident</a></li>
+          <li><a href="admin.html">Admin Portal</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3>Emergency Contacts</h3>
+        <p>112 - Emergency Hotline</p>
+        <p>0800 123 4567 - NAPTIP</p>
+        <p>0700 CHILD HELP</p>
+      </div>
+    </div>
+    <div class="footer-bottom shell">
+      <p>© 2025 SafeVoice Nigeria. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

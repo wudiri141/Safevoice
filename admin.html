@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeVoice | Admin Portal</title>
+  <meta name="description" content="SafeVoice administrative dashboard for triage and oversight." />
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🛡️ SafeVoice</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report Incident</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="report-types.html">Report Types</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="escape.html" class="escape-btn">ESCAPE NOW</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="section-heading">
+        <span class="eyebrow dark">Admin Portal</span>
+        <h1>Overview first, action second.</h1>
+        <p>
+          The best admin format for this kind of system is a triage dashboard: quick metrics at the
+          top, filters in the middle, a live incident table, and a right-side guidance panel for
+          decisions and notes.
+        </p>
+      </div>
+    </section>
+
+    <section class="dashboard-grid cols-4">
+      <article class="kpi-card">
+        <strong>124</strong>
+        <span>Open reports</span>
+      </article>
+      <article class="kpi-card">
+        <strong>38</strong>
+        <span>High priority</span>
+      </article>
+      <article class="kpi-card">
+        <strong>19</strong>
+        <span>Assigned today</span>
+      </article>
+      <article class="kpi-card">
+        <strong>82%</strong>
+        <span>Resolved this week</span>
+      </article>
+    </section>
+
+    <section class="toolbar">
+      <label class="field">
+        Search reports
+        <input type="text" placeholder="Search by report ID, type, or location" />
+      </label>
+      <label class="field">
+        Status
+        <select>
+          <option>All statuses</option>
+          <option>Open</option>
+          <option>In Review</option>
+          <option>Closed</option>
+        </select>
+      </label>
+      <label class="field">
+        Priority
+        <select>
+          <option>All priorities</option>
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+      </label>
+      <label class="field">
+        Agency
+        <select>
+          <option>All agencies</option>
+          <option>Child Protection Unit</option>
+          <option>Investigations Team</option>
+          <option>Community Response Desk</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="table-panel">
+      <div class="panel-head">
+        <span class="eyebrow dark">Incident queue</span>
+        <h2 style="margin: 14px 0 8px;">Live report table</h2>
+        <p style="color: var(--muted); line-height: 1.7; max-width: 70ch;">
+          Use a table for admin work because it supports scanning, filtering, and rapid updates
+          better than a long set of cards. This format also maps well to accessible table
+          semantics and keyboard navigation.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <caption>Recent SafeVoice reports awaiting review</caption>
+          <thead>
+            <tr>
+              <th scope="col">Report ID</th>
+              <th scope="col">Type</th>
+              <th scope="col">Status</th>
+              <th scope="col">Priority</th>
+              <th scope="col">Agency</th>
+              <th scope="col">Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SV-20491</td>
+              <td>Child Abuse</td>
+              <td><span class="status-pill open">Open</span></td>
+              <td><span class="priority-pill high">High</span></td>
+              <td>Child Protection Unit</td>
+              <td>12 min ago</td>
+            </tr>
+            <tr>
+              <td>SV-20488</td>
+              <td>Neglect</td>
+              <td><span class="status-pill in-review">In Review</span></td>
+              <td><span class="priority-pill medium">Medium</span></td>
+              <td>Community Response Desk</td>
+              <td>34 min ago</td>
+            </tr>
+            <tr>
+              <td>SV-20476</td>
+              <td>Human Trafficking</td>
+              <td><span class="status-pill open">Open</span></td>
+              <td><span class="priority-pill high">High</span></td>
+              <td>Investigations Team</td>
+              <td>48 min ago</td>
+            </tr>
+            <tr>
+              <td>SV-20461</td>
+              <td>Drug Trafficking</td>
+              <td><span class="status-pill closed">Closed</span></td>
+              <td><span class="priority-pill low">Low</span></td>
+              <td>Investigations Team</td>
+              <td>2 hr ago</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="dashboard-grid cols-2" style="margin-top: 18px;">
+      <article class="page-panel">
+        <h2>Triage notes</h2>
+        <ul class="info-list">
+          <li>Use the search field first when a caller gives a partial case reference.</li>
+          <li>Keep primary actions in the same location on every page.</li>
+          <li>Show the most urgent cases at the top and keep the queue scannable.</li>
+          <li>Use plain status labels so team members can interpret the state instantly.</li>
+        </ul>
+      </article>
+
+      <aside class="info-stack">
+        <article class="card">
+          <h3>Today’s alerts</h3>
+          <div class="portal-list">
+            <div class="portal-item">
+              <strong>3 urgent cases need escalation</strong>
+              <p>Two involve missing follow-up details and one needs agency assignment.</p>
+            </div>
+            <div class="portal-item">
+              <strong>12 reports waiting for categorization</strong>
+              <p>Review these before the end of the shift to keep response times low.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="callout">
+          <h3>Best format for admin</h3>
+          <p>
+            The strongest admin pattern here is a command-center layout: metrics, filters, a table,
+            and a small guidance panel. That keeps the page focused on triage instead of reading.
+          </p>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container shell">
+      <div class="footer-box">
+        <h3>About SafeVoice</h3>
+        <p>SafeVoice helps citizens anonymously report abuse, trafficking and suspicious activities.</p>
+      </div>
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="report.html">Report Incident</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3>Emergency Contacts</h3>
+        <p>112 - Emergency Hotline</p>
+        <p>0800 123 4567 - NAPTIP</p>
+        <p>0700 CHILD HELP</p>
+      </div>
+    </div>
+    <div class="footer-bottom shell">
+      <p>© 2025 SafeVoice Nigeria. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

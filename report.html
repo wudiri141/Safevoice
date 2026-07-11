@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeVoice | Report Incident</title>
+  <meta name="description" content="Submit an incident report through SafeVoice." />
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🛡️ SafeVoice</a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report Incident</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="report-types.html">Report Types</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="escape.html" class="escape-btn">ESCAPE NOW</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      ☰
+    </button>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="section-heading">
+        <span class="eyebrow dark">Report Incident</span>
+        <h1>Make a report with clarity and dignity.</h1>
+        <p>
+          Use this page to share what happened, where it happened, and any details that can help
+          the response team act quickly.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-grid two">
+      <article class="page-panel">
+        <h2>Incident form</h2>
+        <p>
+          The form is intentionally structured so it feels calm, not crowded. It also works cleanly
+          on mobile by stacking each field in a single column.
+        </p>
+
+        <form class="report-form" action="#" method="post">
+          <div class="form-grid">
+            <label class="field">
+              Full name
+              <input type="text" name="full_name" placeholder="Optional if you prefer to report anonymously" />
+            </label>
+
+            <label class="field">
+              Contact detail
+              <input type="text" name="contact_detail" placeholder="Phone number or email" />
+            </label>
+
+            <label class="field">
+              Report type
+              <select name="report_type">
+                <option>Child Abuse</option>
+                <option>Child Trafficking</option>
+                <option>Drug Trafficking</option>
+                <option>Human Trafficking</option>
+                <option>Child Labour</option>
+                <option>Neglect</option>
+                <option>Suspicious Activity</option>
+              </select>
+            </label>
+
+            <label class="field">
+              Urgency
+              <select name="urgency">
+                <option>Emergency</option>
+                <option>High Priority</option>
+                <option>Standard</option>
+              </select>
+            </label>
+
+            <label class="field full">
+              Incident location
+              <input type="text" name="location" placeholder="Street, building, neighborhood, or closest landmark" />
+            </label>
+
+            <label class="field full">
+              Date and time
+              <input type="text" name="incident_time" placeholder="Example: 8 June 2026, around 6:30 PM" />
+            </label>
+
+            <label class="field full">
+              What happened?
+              <textarea
+                name="details"
+                rows="7"
+                placeholder="Describe the incident clearly. Include names, vehicles, directions, witness details, or anything else that can help."
+              ></textarea>
+            </label>
+
+            <label class="field full">
+              Evidence or notes
+              <textarea
+                name="evidence"
+                rows="4"
+                placeholder="Add any photo, screenshot, video, or note references here."
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <label class="checkbox">
+              <input type="checkbox" name="anonymous" checked />
+              <span>I want to submit this report anonymously if possible.</span>
+            </label>
+
+            <div class="page-actions">
+              <button type="submit" class="primary-btn">Submit Report</button>
+              <a href="contact.html" class="secondary-btn">Need Help?</a>
+            </div>
+          </div>
+        </form>
+
+        <div class="callout" style="margin-top: 20px;">
+          <h3>What to include</h3>
+          <p>
+            Dates, times, names, vehicles, photos, screenshots, and witness details can make a
+            report more useful.
+          </p>
+        </div>
+      </article>
+
+      <aside class="side-list">
+        <article class="card">
+          <h3>Emergency guidance</h3>
+          <p>
+            If someone is in immediate danger, contact emergency services first before submitting
+            a report.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Privacy</h3>
+          <p>
+            Only share the information needed for the case. Anonymous reporting is supported
+            wherever possible.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Follow-up</h3>
+          <p>
+            Keep a copy of your report details in case investigators request more information.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Before you submit</h3>
+          <ul class="detail-list">
+            <li>Check that the location is as exact as possible.</li>
+            <li>Add any relevant evidence or witness notes.</li>
+            <li>Choose the report type that best matches the incident.</li>
+          </ul>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container shell">
+      <div class="footer-box">
+        <h3>About SafeVoice</h3>
+        <p>SafeVoice helps citizens anonymously report abuse, trafficking and suspicious activities.</p>
+      </div>
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="report-types.html">Report Types</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3>Emergency Contacts</h3>
+        <p>112 - Emergency Hotline</p>
+        <p>0800 123 4567 - NAPTIP</p>
+        <p>0700 CHILD HELP</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom shell">
+      <p>© 2025 SafeVoice Nigeria. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
